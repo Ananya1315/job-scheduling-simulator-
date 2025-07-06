@@ -1,7 +1,7 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, LabelList, ResponsiveContainer } from 'recharts';
 
-function C_SCANChart({ sequence }) {
+function CSCANChart({ sequence }) {
   const data = sequence.map((cylinder, index) => ({
     name: `Step ${index}`,
     cylinder,
@@ -25,4 +25,4 @@ function C_SCANChart({ sequence }) {
   );
 }
 
-export default C_SCANChart;
+export default CSCANChart;

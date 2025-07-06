@@ -1,4 +1,4 @@
-export function c_scan(requests, head, diskSize = 200, direction = 'right') {
+export function cscan(requests, head, diskSize = 200, direction = 'right') {
   requests = [...requests].sort((a, b) => a - b); // Clone & sort
   let totalMovement = 0;
   let sequence = [head];

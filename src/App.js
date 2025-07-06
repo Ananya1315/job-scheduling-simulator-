@@ -8,12 +8,12 @@ import ResultsDisplay from './components/ResultsDisplay';
 import { fcfs } from './algorithm/fcfs';
 import { sstf } from './algorithm/sstf';
 import { scan } from './algorithm/scan';
-import { c_scan } from './algorithm/c_scan';
+import { cscan } from './algorithm/cscan';
 
 import FCFSChart from './components/FCFSchart';
 import SSTFChart from './components/SSTFchart';
 import SCANChart from './components/SCANchart';
-import C_SCANChart from './components/C_SCANchart';
+import CSCANChart from './components/CSCANchart';
 
 function App() {
   const [result, setResult] = useState(null);
@@ -30,7 +30,7 @@ function App() {
     } else if (algorithm === 'scan') {
       output = scan(requests, head, diskSize, dirFlag);
     } else if (algorithm === 'c_scan') {
-      output = c_scan(requests, head, diskSize, dirFlag);
+      output = cscan(requests, head, diskSize, dirFlag);
     }
 
     setResult(output);
@@ -65,7 +65,7 @@ function App() {
                 <SCANChart sequence={result.sequence} />
               )}
               {selectedAlgorithm === 'c_scan' && (
-                <C_SCANChart sequence={result.sequence} />
+                <CSCANChart sequence={result.sequence} />
               )}
             </>
           )}
