@@ -2,6 +2,13 @@
 
 [View the Live App on Netlify](https://job-scheduler-ananya.netlify.app/)
 
+### ⚙️ Tech Stack
+- React.js
+- Chart.js
+- CI/CD: GitHub Actions
+- Deployment: Netlify
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
