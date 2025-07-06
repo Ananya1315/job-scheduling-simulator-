@@ -53,12 +53,14 @@ npm install
 npm start
 ```
 🛠 Scripts
+
 Command	Description
 npm start	Run app in development mode
 npm run build	Build app for production
 npm test	Run tests (if added)
 
 ✅ CI/CD
+
 This project uses GitHub Actions for CI. Every push triggers:
 
 Lint checks
@@ -68,8 +70,10 @@ Build tests
 Auto-deploy to Netlify
 
 📦 Deployment
+
 This app is deployed via Netlify using the production build folder.
 You can also drag and drop your build folder into Netlify manually for quick deployment.
 
 ✨ Author
+
 Ananya Samudrala
