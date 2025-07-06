@@ -3,6 +3,7 @@
 [View the Live App on Netlify](https://job-scheduler-ananya.netlify.app/)
 
 ### ⚙️ Tech Stack
+
 - React.js
 - Chart.js
 - CI/CD: GitHub Actions
