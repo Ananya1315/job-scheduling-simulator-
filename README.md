@@ -1,74 +1,79 @@
+# 💽 Job Scheduling Simulator
+
+An interactive disk scheduling visualizer built with **React.js**, designed to demonstrate various disk scheduling algorithms like **FCFS**, **SSTF**, **SCAN**, and **C-SCAN**. The simulator visually shows the head movements and total seek time based on user input, making it great for understanding disk scheduling from a DSA and OS perspective.
+
+---
+
 ## 🔗 Live Demo
 
-[View the Live App on Netlify](https://job-scheduler-ananya.netlify.app/)
+👉 [View the Live App on Netlify](https://job-scheduler-ananya.netlify.app/)
 
-# Getting Started with Create React App
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## ⚙️ Tech Stack
 
-## Available Scripts
+- **Frontend:** React.js
+- **Charts:** Chart.js
+- **CI/CD:** GitHub Actions
+- **Deployment:** Netlify
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🧠 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Supports 4 major algorithms:
+  - FCFS (First Come First Serve)
+  - SSTF (Shortest Seek Time First)
+  - SCAN (Elevator Algorithm)
+  - C-SCAN (Circular SCAN)
+- Custom input for:
+  - Initial head position
+  - Disk size
+  - Request sequence
+  - Direction for SCAN & C-SCAN
+- Real-time visual charts for each algorithm
+- Displays total seek time and execution path
+- Clean, responsive layout
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Getting Started Locally
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js
+- npm
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/Ananya1315/job-scheduling-simulator-.git
+cd job-scheduling-simulator-
+npm install
+npm start
+```
+🛠 Scripts
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Command	Description
+npm start	Run app in development mode
+npm run build	Build app for production
+npm test	Run tests (if added)
 
-### `npm run eject`
+✅ CI/CD
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project uses GitHub Actions for CI. Every push triggers:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Lint checks
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Build tests
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Auto-deploy to Netlify
 
-## Learn More
+📦 Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This app is deployed via Netlify using the production build folder.
+You can also drag and drop your build folder into Netlify manually for quick deployment.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+✨ Author
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Ananya Samudrala
