@@ -45,9 +45,14 @@ function App() {
         }
       );
 
-      setResult(response.data);
+     if (response.data.error) {
+  alert(response.data.error);
+  setResult(null);
+  return;
+}
 
-      setSelectedAlgorithm(algorithm);
+setResult(response.data);
+setSelectedAlgorithm(algorithm);
 
     }
     catch (error) {
@@ -79,7 +84,11 @@ function App() {
           direction: direction
         }
       );
-
+if (response.data.error) {
+  alert(response.data.error);
+  setComparisonResult(null);
+  return;
+}
       setComparisonResult(response.data);
 
     }
@@ -143,6 +152,9 @@ function App() {
 
               {selectedAlgorithm === 'look' && (
                 <SCANChart sequence={result.sequence} />
+              )}
+               {selectedAlgorithm === 'clook' && (
+                <CSCANChart sequence={result.sequence} />
               )}
 
             </>

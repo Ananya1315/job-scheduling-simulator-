@@ -9,6 +9,8 @@ from app.algorithms.sstf import sstf
 from app.algorithms.scan import scan
 from app.algorithms.cscan import cscan
 from app.algorithms.look import look
+from app.algorithms.clook import clook
+
 app = FastAPI()
 
 app.add_middleware(
@@ -26,9 +28,13 @@ def home():
 
 def validate_input(data):
     print("REQUESTS =", data.requests)
-    if not data.requests:
+    if len(data.requests)==0:
         return {
             "error": "Request list cannot be empty"
+        }
+    if len(data.requests) > 1000:
+        return {
+            "error": "Too many requests"
         }
     if data.head < 0 or data.head >= data.disk_size:
         return {
@@ -68,6 +74,9 @@ def stimulate(data: SimulationRequest):
     elif data.algorithm.lower() == "look":
         result = look(data.requests,data.head,data.direction)
         return result
+    elif data.algorithm.lower() == "clook":
+        result = clook(data.requests,data.head,data.direction)
+        return result
     return {
         "error": "Algorithm not supported"
     }
@@ -82,6 +91,7 @@ def compare(data: CompareRequest):
     results["scan"] = scan(data.requests,data.head,data.disk_size,data.direction)
     results["cscan"] = cscan(data.requests,data.head,data.disk_size,data.direction)
     results["look"] = look(data.requests,data.head,data.direction)
+    results["clook"] = clook(data.requests,data.head,data.direction)
     best_algorithm = min(
         results,
         key=lambda algorithm:

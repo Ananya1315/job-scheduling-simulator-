@@ -77,12 +77,13 @@ function SchedulerForm({ onCalculate , onCompare }) {
           <option value="scan">SCAN</option>
           <option value="cscan">C-SCAN</option>
           <option value="look">LOOK</option>
+          <option value="clook">C-LOOK</option>
         </select>
       </div>
        {}
-      {(selectedAlgorithm === 'scan' || selectedAlgorithm === 'cscan' || selectedAlgorithm === 'look') && (
+      {(selectedAlgorithm === 'scan' || selectedAlgorithm === 'cscan' || selectedAlgorithm === 'look' || selectedAlgorithm === 'clook') && (
         <div style={{ marginTop: '10px' }}>
-          <label>Direction (for SCAN & C-SCAN):</label><br />
+          <label>Direction:</label><br />
           <select
             value={direction}
             onChange={(e) => setDirection(e.target.value)}
