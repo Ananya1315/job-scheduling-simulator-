@@ -15,6 +15,7 @@ import ComparisonResults from './components/comparisionResult';
 
 function App() {
 
+  const API_URL = process.env.REACT_APP_API_URL;
   const [result, setResult] = useState(null);
 
   const [comparisonResult, setComparisonResult] = useState(null);
@@ -35,7 +36,7 @@ function App() {
     try {
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/stimulate",
+        `${API_URL}/stimulate`,
         {
           algorithm: algorithm,
           requests: requests,
@@ -76,7 +77,7 @@ setSelectedAlgorithm(algorithm);
     try {
 
       const response = await axios.post(
-        "http://127.0.0.1:8000/compare",
+        `${API_URL}/compare`,
         {
           requests: requests,
           head: head,
