@@ -8,7 +8,7 @@ const FCFSChart = ({ sequence }) => {
   }));
 
   return (
-    <div>
+    <div className="chart-box" style={{ marginTop: '2rem' }}>
       <h3>FCFS Movement Chart</h3>
       <BarChart
         width={600}

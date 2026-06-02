@@ -12,16 +12,19 @@ import SCANChart from './components/SCANchart';
 import CSCANChart from './components/CSCANchart';
 import ComparisonResults from './components/comparisionResult';
 
-
 function App() {
 
   const API_URL = process.env.REACT_APP_API_URL;
+
   const [result, setResult] = useState(null);
 
   const [comparisonResult, setComparisonResult] = useState(null);
 
   const [selectedAlgorithm, setSelectedAlgorithm] =
     useState('fcfs');
+
+  const [viewMode, setViewMode] = useState(null);
+  // null | run | compare
 
 
   // SINGLE ALGORITHM SIMULATION
@@ -46,14 +49,18 @@ function App() {
         }
       );
 
-     if (response.data.error) {
-  alert(response.data.error);
-  setResult(null);
-  return;
-}
+      if (response.data.error) {
+        alert(response.data.error);
+        setResult(null);
+        return;
+      }
 
-setResult(response.data);
-setSelectedAlgorithm(algorithm);
+      setResult(response.data);
+      setSelectedAlgorithm(algorithm);
+
+      // clear compare view
+      setComparisonResult(null);
+      setViewMode("run");
 
     }
     catch (error) {
@@ -85,12 +92,18 @@ setSelectedAlgorithm(algorithm);
           direction: direction
         }
       );
-if (response.data.error) {
-  alert(response.data.error);
-  setComparisonResult(null);
-  return;
-}
+
+      if (response.data.error) {
+        alert(response.data.error);
+        setComparisonResult(null);
+        return;
+      }
+
       setComparisonResult(response.data);
+
+      // clear run view
+      setResult(null);
+      setViewMode("compare");
 
     }
     catch (error) {
@@ -129,10 +142,23 @@ if (response.data.error) {
 
           <SimulationBoard />
 
-          {result && (
+          {/* EMPTY STATE */}
+          {viewMode === null && (
+            <div className="empty-state">
+              <h3>📊 No Simulation Yet</h3>
+
+              <p>
+                Run an algorithm or compare algorithms
+                to view results.
+              </p>
+            </div>
+          )}
+
+
+          {/* RUN MODE */}
+          {viewMode === "run" && result && (
 
             <>
-
               <ResultsDisplay result={result} />
 
               {selectedAlgorithm === 'fcfs' && (
@@ -154,16 +180,23 @@ if (response.data.error) {
               {selectedAlgorithm === 'look' && (
                 <SCANChart sequence={result.sequence} />
               )}
-               {selectedAlgorithm === 'clook' && (
+
+              {selectedAlgorithm === 'clook' && (
                 <CSCANChart sequence={result.sequence} />
               )}
-
             </>
 
           )}
-          <ComparisonResults
-  comparisonResult={comparisonResult}
-/>
+
+
+          {/* COMPARE MODE */}
+          {viewMode === "compare" && comparisonResult && (
+
+            <ComparisonResults
+              comparisonResult={comparisonResult}
+            />
+
+          )}
 
         </div>
 

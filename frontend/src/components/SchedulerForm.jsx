@@ -97,8 +97,7 @@ function SchedulerForm({ onCalculate , onCompare }) {
       <button type="submit" style={{ marginTop: '10px' }}>
         Run {selectedAlgorithm.toUpperCase()}
       </button>
-     <button
-  type="button"
+     <button type="button" className="action-btn" style={{ marginLeft: "10px" }}
   onClick={() => {
 
     const requestArray = requests

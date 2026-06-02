@@ -8,7 +8,7 @@ function SSTFChart({ sequence }) {
   }));
 
   return (
-    <div style={{ marginTop: '2rem' }}>
+    <div className="chart-box" style={{ marginTop: '2rem' }}>
       <h3>SSTF Movement Chart</h3>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={data}>
