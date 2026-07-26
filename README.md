@@ -84,19 +84,21 @@ Charts and Recommendations
 
 ### Home Page
 
-*Add screenshot here*
+<img width="957" height="533" alt="image" src="https://github.com/user-attachments/assets/16628354-9763-422a-b438-4ddaa913d760" />
 
 ### Algorithm Simulation
 
-*Add screenshot here*
+<img width="957" height="528" alt="image" src="https://github.com/user-attachments/assets/35a6b73e-2bbb-45f9-a680-bcf70e2e43f0" />
 
 ### Algorithm Comparison Dashboard
 
-*Add screenshot here*
+<img width="562" height="455" alt="image" src="https://github.com/user-attachments/assets/9ac47b06-b2a3-435d-9bba-ba354d6dcf7b" />
+<img width="550" height="379" alt="image" src="https://github.com/user-attachments/assets/1cd3e07f-79df-4bf5-ab12-a4462fe06c89" />
 
 ### CI/CD Pipeline
 
-*Add screenshot here*
+<img width="659" height="341" alt="image" src="https://github.com/user-attachments/assets/94cec450-e392-4807-ae6d-fcd64c5914ef" />
+<img width="659" height="347" alt="image" src="https://github.com/user-attachments/assets/3b978e4a-7f69-46ff-9fec-1b2eefa50cba" />
 
 ---
 
